@@ -1,0 +1,2 @@
+class PuzzleController < ApplicationController
+end

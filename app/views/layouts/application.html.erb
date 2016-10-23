@@ -6,9 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Leckerli+One" rel="stylesheet"> 
   </head>
 
   <body>
-    <%= yield %>
+  	<header>
+  		<div id="title">Where's Wally?</div>
+  	</header>
+  	<div id="container">
+    	<%= yield %>
+    </div>
   </body>
 </html>
