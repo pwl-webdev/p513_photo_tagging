@@ -1,1 +1,10 @@
-It's something!
+<div class="container">
+	<div class="title">Select a puzzle</div>
+	<% @puzzles.each do |p| %>
+		<%=link_to puzzle_path(p) do %>
+			<div class="miniature">
+				<%= image_tag "#{p.id}.jpg" %>
+			</div>
+		<% end %>
+	<% end %>
+</div>
