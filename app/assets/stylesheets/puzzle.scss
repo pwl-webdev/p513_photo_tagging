@@ -105,17 +105,25 @@ header{
 	}
 }
 .puzzle_container{
-	max-width: 90%;
-	min-width: 1200px;
+	/*max-width: 90%;
+	min-width: 1200px;*/
+	min-width: 100%;
 	margin: 0 auto;
+	.subtitle{
+		margin: 10px auto 0 auto;
+		line-height: 20px;
+		font-size: 20px;
+		text-align: center;
+		vertical-align: middle;
+		font-family: 'Leckerli One';
+	}
 	.puzzle_picture{
-		img{
-			width: 100%;
+		min-width: 100%;
+		margin: 20px auto 20px auto;
+		#image{
 	        -webkit-box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
             -moz-box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
             box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
-            margin-bottom: 20px;
-            margin-top: 20px;
 		}
 	}
 }

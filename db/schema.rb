@@ -15,6 +15,9 @@ ActiveRecord::Schema.define(version: 20161023180300) do
   create_table "puzzles", force: :cascade do |t|
     t.integer  "wally_x"
     t.integer  "wally_y"
+    t.integer  "wally_dx"
+    t.integer  "wally_dy"
+    t.integer  "width"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string   "picture"
