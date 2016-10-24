@@ -104,3 +104,18 @@ header{
 		height: 100%;
 	}
 }
+.puzzle_container{
+	max-width: 90%;
+	min-width: 1200px;
+	margin: 0 auto;
+	.puzzle_picture{
+		img{
+			width: 100%;
+	        -webkit-box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
+            -moz-box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
+            box-shadow: 0px 0px 14px 4px rgba(194,186,194,1);
+            margin-bottom: 20px;
+            margin-top: 20px;
+		}
+	}
+}
