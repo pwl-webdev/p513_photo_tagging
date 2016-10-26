@@ -3,7 +3,7 @@
 	<% @puzzles.each do |p| %>
 		<%=link_to puzzle_path(p) do %>
 			<div class="miniature">
-				<%= image_tag "#{p.id}.jpg" %>
+				<%= image_tag "#{p.id}_min.jpg" %>
 			</div>
 		<% end %>
 	<% end %>
