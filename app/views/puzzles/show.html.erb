@@ -4,6 +4,22 @@
 	<div class="puzzle_picture">
 		<div id="frame">
 			<%= image_tag "#{@puzzle.id}.jpg", id: "image", :style => "width: #{@puzzle.width}px; display: block; margin-left: auto; margin-right: auto;" %>
+			<div class="high_score_box">
+				<div id = "close">X</div>
+				<div class = "label congratulations">Cogratulations</div>
+				<div class ="label">What's your Name?</div>
+				<form><!--
+					--><input id = "user_name_input" type = "text" name = "username"><!--
+					--><input id = "button" type = "submit" value = "Send"><!--
+				--></form>
+				<div class ="label to_hide">Top 10 Scores:</div>
+				<table class="to_hide">
+					<tr>
+						<th>Name</th>
+						<th>Time</th>
+					</tr>
+				</table>
+			</div>
 		</div>
 	</div>
 </div>

@@ -3,6 +3,7 @@ class CreateHighScores < ActiveRecord::Migration[5.0]
     create_table :high_scores do |t|
       t.string :p513ptid
       t.string :name
+      t.integer :guess_time
       t.belongs_to :puzzle
       t.timestamps
     end

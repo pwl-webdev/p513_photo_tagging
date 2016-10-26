@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 20161026173812) do
   create_table "high_scores", force: :cascade do |t|
     t.string   "p513ptid"
     t.string   "name"
+    t.integer  "guess_time"
     t.integer  "puzzle_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -15,7 +15,7 @@ class PuzzlesController < ApplicationController
 				@resp
 				if (params[:posX].to_i >= @puzzle.wally_x && params[:posX].to_i <= (@puzzle.wally_x + @puzzle.wally_dx) && params[:posY].to_i >= @puzzle.wally_y && params[:posY].to_i <= (@puzzle.wally_y + @puzzle.wally_dy)) then
 					@user = Guess.find_by(p513ptid: cookies[:p513ptid], puzzle_id: @puzzle.id)
-					if @user then 
+					if (@user && @user.guess_time == nil) then 
 						puts "wally found!"
 						puts "time start: "
 						puts @user.created_at
@@ -25,6 +25,12 @@ class PuzzlesController < ApplicationController
 						@user.update(guess_time: @time)
 						@resp = "success"
 						render json: {status: @resp, time: @time}.to_json
+					elsif(@user) then
+						puts "log high score"
+						@resp = "success"
+						HighScore.create!(p513ptid: cookies[:p513ptid], puzzle_id: @puzzle.id, guess_time: @user.guess_time, name: params[:name])
+						@records = HighScore.select("name, guess_time").where(puzzle_id: @puzzle.id).order(guess_time: :asc).limit(10)
+						render json: {status: @resp, records: @records}.to_json
 					end
 				else 
 					puts "wally not found!"
