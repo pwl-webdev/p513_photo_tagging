@@ -10,7 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161023180300) do
+ActiveRecord::Schema.define(version: 20161026173812) do
+
+  create_table "guesses", force: :cascade do |t|
+    t.string   "p513ptid"
+    t.integer  "puzzle_id"
+    t.integer  "guess_time"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["puzzle_id"], name: "index_guesses_on_puzzle_id"
+  end
+
+  create_table "high_scores", force: :cascade do |t|
+    t.string   "p513ptid"
+    t.string   "name"
+    t.integer  "puzzle_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["puzzle_id"], name: "index_high_scores_on_puzzle_id"
+  end
 
   create_table "puzzles", force: :cascade do |t|
     t.integer  "wally_x"

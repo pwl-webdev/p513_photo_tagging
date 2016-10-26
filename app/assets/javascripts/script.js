@@ -28,7 +28,7 @@ var tagQuery = function(posX, posY){
     	console.log(json.status)
     	if(json.status == "success"){
     		$(".target_box").css("border-color","green");
-    		alert("Congratulations! Your time is "+json.time);
+    		alert("Congratulations! Your time is "+json.time+"s");
     	} else{
     		$(".target_box").fadeOut( "slow" );
     	}
